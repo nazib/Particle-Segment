@@ -1,0 +1,632 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1258</width>
+    <height>792</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>1</horstretch>
+    <verstretch>1</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Pirticle-Segment</string>
+  </property>
+  <property name="horizontalStretch" stdset="0">
+   <number>1</number>
+  </property>
+  <property name="verticalStretch" stdset="0">
+   <number>1</number>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>1</horstretch>
+     <verstretch>1</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="horizontalStretch" stdset="0">
+    <number>1</number>
+   </property>
+   <property name="verticalStretch" stdset="0">
+    <number>1</number>
+   </property>
+   <widget class="QGraphicsView" name="inputView">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>110</y>
+      <width>491</width>
+      <height>321</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>1</horstretch>
+      <verstretch>1</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="horizontalStretch" stdset="0">
+     <number>1</number>
+    </property>
+    <property name="verticalStretch" stdset="0">
+     <number>1</number>
+    </property>
+   </widget>
+   <widget class="QGraphicsView" name="inputView_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>430</y>
+      <width>491</width>
+      <height>331</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>1</horstretch>
+      <verstretch>1</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="horizontalStretch" stdset="0">
+     <number>1</number>
+    </property>
+    <property name="verticalStretch" stdset="0">
+     <number>1</number>
+    </property>
+   </widget>
+   <widget class="QGraphicsView" name="intermView">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>10</y>
+      <width>501</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>1</horstretch>
+      <verstretch>1</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="horizontalStretch" stdset="0">
+     <number>1</number>
+    </property>
+    <property name="verticalStretch" stdset="0">
+     <number>1</number>
+    </property>
+   </widget>
+   <widget class="QSlider" name="intermSlider">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>270</y>
+      <width>631</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>1</horstretch>
+      <verstretch>1</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <property name="horizontalStretch" stdset="0">
+     <number>1</number>
+    </property>
+    <property name="verticalStretch" stdset="0">
+     <number>1</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="interm_label">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>250</y>
+      <width>161</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>1</horstretch>
+      <verstretch>1</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="text">
+     <string>Detected Maskes by SAM</string>
+    </property>
+    <property name="horizontalStretch" stdset="0">
+     <number>1</number>
+    </property>
+    <property name="verticalStretch" stdset="0">
+     <number>1</number>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="SamBox">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>310</y>
+      <width>371</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>1</horstretch>
+      <verstretch>1</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="title">
+     <string>Apply SAM Segmentation</string>
+    </property>
+    <property name="horizontalStretch" stdset="0">
+     <number>1</number>
+    </property>
+    <property name="verticalStretch" stdset="0">
+     <number>1</number>
+    </property>
+    <widget class="QPushButton" name="SAM_btn">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>211</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>1</horstretch>
+       <verstretch>1</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>SAM Segment</string>
+     </property>
+     <property name="horizontalStretch" stdset="0">
+      <number>1</number>
+     </property>
+     <property name="verticalStretch" stdset="0">
+      <number>1</number>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="EdgeBox">
+    <property name="geometry">
+     <rect>
+      <x>890</x>
+      <y>310</y>
+      <width>351</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>1</horstretch>
+      <verstretch>1</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="title">
+     <string>Segment Refine</string>
+    </property>
+    <property name="horizontalStretch" stdset="0">
+     <number>1</number>
+    </property>
+    <property name="verticalStretch" stdset="0">
+     <number>1</number>
+    </property>
+    <widget class="QComboBox" name="maskSelectBox">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>71</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>1</horstretch>
+       <verstretch>1</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="horizontalStretch" stdset="0">
+      <number>1</number>
+     </property>
+     <property name="verticalStretch" stdset="0">
+      <number>1</number>
+     </property>
+    </widget>
+    <widget class="QSlider" name="sigmaSlider">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>20</y>
+       <width>221</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>1</horstretch>
+       <verstretch>1</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="maximum">
+      <number>250</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="horizontalStretch" stdset="0">
+      <number>1</number>
+     </property>
+     <property name="verticalStretch" stdset="0">
+      <number>1</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="cannysigma_label">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>10</y>
+       <width>31</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>1</horstretch>
+       <verstretch>1</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>Sigma</string>
+     </property>
+     <property name="horizontalStretch" stdset="0">
+      <number>1</number>
+     </property>
+     <property name="verticalStretch" stdset="0">
+      <number>1</number>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Refine_btn">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>100</y>
+       <width>331</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>1</horstretch>
+       <verstretch>1</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>Refine Edges</string>
+     </property>
+     <property name="horizontalStretch" stdset="0">
+      <number>1</number>
+     </property>
+     <property name="verticalStretch" stdset="0">
+      <number>1</number>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="SobelButton">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>51</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>1</horstretch>
+       <verstretch>1</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>Sobel</string>
+     </property>
+     <property name="horizontalStretch" stdset="0">
+      <number>1</number>
+     </property>
+     <property name="verticalStretch" stdset="0">
+      <number>1</number>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="ErodeButton">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>50</y>
+       <width>51</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>1</horstretch>
+       <verstretch>1</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>Erode</string>
+     </property>
+     <property name="horizontalStretch" stdset="0">
+      <number>1</number>
+     </property>
+     <property name="verticalStretch" stdset="0">
+      <number>1</number>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="DilateButton">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>50</y>
+       <width>51</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>1</horstretch>
+       <verstretch>1</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>Dilate</string>
+     </property>
+     <property name="horizontalStretch" stdset="0">
+      <number>1</number>
+     </property>
+     <property name="verticalStretch" stdset="0">
+      <number>1</number>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="SaveFileBox">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>480</y>
+      <width>731</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>1</horstretch>
+      <verstretch>1</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="title">
+     <string>Save Image</string>
+    </property>
+    <property name="horizontalStretch" stdset="0">
+     <number>1</number>
+    </property>
+    <property name="verticalStretch" stdset="0">
+     <number>1</number>
+    </property>
+    <widget class="QPushButton" name="SaveImage_btn">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>30</y>
+       <width>211</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>1</horstretch>
+       <verstretch>1</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>Save Image</string>
+     </property>
+     <property name="horizontalStretch" stdset="0">
+      <number>1</number>
+     </property>
+     <property name="verticalStretch" stdset="0">
+      <number>1</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="imageWidth_label">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>31</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>1</horstretch>
+       <verstretch>1</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>Width</string>
+     </property>
+     <property name="horizontalStretch" stdset="0">
+      <number>1</number>
+     </property>
+     <property name="verticalStretch" stdset="0">
+      <number>1</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="imageHeight_label">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>40</y>
+       <width>31</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>1</horstretch>
+       <verstretch>1</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="text">
+      <string>Height</string>
+     </property>
+     <property name="horizontalStretch" stdset="0">
+      <number>1</number>
+     </property>
+     <property name="verticalStretch" stdset="0">
+      <number>1</number>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="widthBox">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>40</y>
+       <width>101</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>1</horstretch>
+       <verstretch>1</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="horizontalStretch" stdset="0">
+      <number>1</number>
+     </property>
+     <property name="verticalStretch" stdset="0">
+      <number>1</number>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="HeightBox">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>40</y>
+       <width>101</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>1</horstretch>
+       <verstretch>1</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="horizontalStretch" stdset="0">
+      <number>1</number>
+     </property>
+     <property name="verticalStretch" stdset="0">
+      <number>1</number>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="ExitMain_btn">
+    <property name="geometry">
+     <rect>
+      <x>740</x>
+      <y>690</y>
+      <width>211</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>1</horstretch>
+      <verstretch>1</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="text">
+     <string>Exit</string>
+    </property>
+    <property name="horizontalStretch" stdset="0">
+     <number>1</number>
+    </property>
+    <property name="verticalStretch" stdset="0">
+     <number>1</number>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="SelectMain_btn">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>50</y>
+      <width>211</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>1</horstretch>
+      <verstretch>1</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="text">
+     <string>Select Image Folder</string>
+    </property>
+    <property name="horizontalStretch" stdset="0">
+     <number>1</number>
+    </property>
+    <property name="verticalStretch" stdset="0">
+     <number>1</number>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>1</horstretch>
+     <verstretch>1</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="horizontalStretch" stdset="0">
+    <number>1</number>
+   </property>
+   <property name="verticalStretch" stdset="0">
+    <number>1</number>
+   </property>
+  </widget>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
