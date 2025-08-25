@@ -54,7 +54,7 @@ keras>=2.12.0
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/particle-segmentation-tool.git
+   git clone https://github.com/nazib/Particle-Segment
    cd particle-segmentation-tool
    ```
 
@@ -112,6 +112,9 @@ conda activate zirconapp  # or source particle_env/bin/activate
 # Run the application
 python particle-segment_v.2.0.py
 ```
+#### Create following folders:
+1. **classification_models** (Download and Save all Classification models and save there from [here](https://drive.google.com/drive/folders/1oGrfC3Hkh2gXgCJR3DWN9m_zt_rpb_iw?usp=drive_link))
+2. **binary_model** (Download and save binary model from [here:](https://drive.google.com/drive/folders/1oGrfC3Hkh2gXgCJR3DWN9m_zt_rpb_iw?usp=drive_link) 
 
 ### Basic Workflow
 
@@ -264,7 +267,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👥 Authors
 
-- **Your Name** - *Initial work* - [YourGitHub](https://github.com/yourusername)
+- **Abdullah Nazib** - *Initial work* - [YourGitHub](https://github.com/nazib)
 
 ## 🙏 Acknowledgments
 
